@@ -7,7 +7,7 @@ const AuthPage = () => {
   const [isSignup, setIsSignup] = useState(false);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-100 to-gray-100 p-4">
+    <div className="min-h-screen flex items-center justify-center p-4">
       <div className="w-full max-w-6xl grid md:grid-cols-2 bg-white rounded-2xl shadow-xl overflow-hidden max-h-screen">
         {/* Left Side: Image and Text */}
         <div className="relative hidden md:block">

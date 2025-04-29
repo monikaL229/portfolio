@@ -14,7 +14,9 @@ import AuthCard from './pages/AuthCard';
 
 function App() {
   return (
-    <div className="font-[Poppins]">
+    <div className="w-full flex justify-center px-2 py-2">
+    <div className="w-full max-w-[1920px] rounded-2xl shadow-lg p-4 sm:p-8 border border-gray-200 bg-white">   
+
     <Router>
       <Routes>
         <Route path="/" element={<Dashboard />} />
@@ -29,6 +31,7 @@ function App() {
 
       </Routes>
     </Router>
+    </div>
   </div>
   );
 }

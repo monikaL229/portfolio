@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Button from '../components/Button';
 
 function PortfolioDetail() {
   const [shareLink, setShareLink] = useState("");
@@ -19,7 +20,7 @@ function PortfolioDetail() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto p-6 bg-white rounded-xl shadow-md mt-10">
+    <>
       {/* Header */}
       <h1>Project Details</h1>
       <p className="text-gray-600 text-center text-lg mb-6">
@@ -53,12 +54,12 @@ function PortfolioDetail() {
           <option value="30">1 Month</option>
         </select>
 
-        <button 
-          className="bg-orange-500 text-white py-2 px-4 rounded-md hover:bg-orange-600"
+        <Button
+         
           onClick={generateLink}
         >
           Generate Share Link
-        </button>
+        </Button>
         
         
         <input 
@@ -69,15 +70,14 @@ function PortfolioDetail() {
           readOnly 
           className="mt-4 p-2 border rounded-md w-1/2 text-gray-700" 
         />
-        
-        <button 
-          className="bg-orange-500 text-white py-2 px-4 rounded-md hover:bg-orange-600 mt-4"
+        <Button
+       
           onClick={copyLink}
         >
           Copy Link
-        </button>
+        </Button>
       </div>
-    </div>
+    </>
   );
 }
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaUser, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import Button from '../components/Button';
 
 const Userprofile = () => {
 
@@ -20,8 +21,7 @@ const Userprofile = () => {
     // Save logic here
   };
   return (
-    <div className="min-h-screen flex items-start justify-center pt-10">
-    <div className="w-full max-w-3xl bg-white rounded-2xl shadow-lg p-8 animate-fadeIn">
+<>
       <h1 className="text-3xl font-semibold text-center text-orange-500 mb-6">User Profile</h1>
   
       <div className="space-y-6">
@@ -78,20 +78,13 @@ const Userprofile = () => {
             />
           </div>
   
-          <button
-            type="submit"
-            className="w-full bg-orange-400 hover:bg-orange-500 text-white font-semibold py-3 rounded-md transition duration-300"
-          >
+          <Button  type="submit">
             Save Changes
-          </button>
+          </Button>
         </form>
       </div>
-    </div>
-  </div>
-  
-
-  
-)
+     </>
+     )
 }
 
 export default Userprofile

@@ -2,8 +2,7 @@ import React from 'react';
 
 const Notification = () => {
   return (
-    <div className="min-h-screen flex items-start justify-center pt-10">
-      <div className="container max-w-xl bg-white rounded-2xl shadow-lg p-8">
+  <>
         <h1>Link Activity Notifications</h1>
 
         <div className="space-y-6">
@@ -23,8 +22,7 @@ const Notification = () => {
             <time className="block text-black text-sm">Viewed on April 23, 2025 at 3:48 PM</time>
           </div>
         </div>
-      </div>
-    </div>
+    </>
   );
 };
 

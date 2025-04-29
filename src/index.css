@@ -5,15 +5,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
 body {
-    font-family: 'Segoe UI', sans-serif;
+    
     margin: 0;
     padding: 0;
     background: linear-gradient(135deg, #f1e3e3, hsl(0, 0%, 96%));
-     color: #333;
+    color: #333;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
     padding-top: 40px;
   }
 

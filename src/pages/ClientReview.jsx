@@ -2,8 +2,7 @@ import React from 'react';
 
 const ClientReview = ({ isExpired = false }) => {
   return (
-    <div className="min-h-screen flex items-start justify-center  pt-10">
-      <div className="container max-w-3xl bg-white rounded-2xl shadow-lg p-8">
+<>
         <h1 className="text-3xl font-semibold text-center text-orange-500 mb-4">Project Review</h1>
 
         <div className="text-sm text-black mb-8">
@@ -40,8 +39,7 @@ const ClientReview = ({ isExpired = false }) => {
         <div className="text-xs text-gray-500 text-center mt-12">
           📌 Note: Your access may be logged for activity insights.
         </div>
-      </div>
-    </div>
+  </>
   );
 };
 

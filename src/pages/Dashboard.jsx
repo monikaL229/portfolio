@@ -1,74 +1,60 @@
-import React from 'react'
+import React from 'react';
 
 const Dashboard = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-200 via-white to-gray-300 flex justify-center items-start pt-10 font-[Poppins]">
-    <div className="bg-white/90 backdrop-blur-lg shadow-2xl rounded-3xl max-w-[1400px] w-[90%] p-10 animate-fadeIn transition-all">
-      
-      {/* Header */}
-      <header className="flex items-center justify-between p-5 bg-white shadow-md rounded-xl mb-10">
-        <div className="bg-black p-2 rounded-lg">
-          <img
-            src="https://ninjatech.agency/wp-content/themes/ninja/assets/images/ninjatech-logo.svg"
-            alt="ninjatech-logo"
-            className="w-28"
-          />
-        </div>
-
-        <nav className="flex gap-8">
-          <a href="#" className="relative text-lg font-medium text-gray-700 hover:after:w-6 after:absolute after:bottom-0 after:left-0 after:h-[3px] after:w-0 after:bg-orange-400 after:transition-all">
-            Dashboard
-          </a>
-          <a href="#" className="relative text-lg font-medium text-gray-700 hover:after:w-6 after:absolute after:bottom-0 after:left-0 after:h-[3px] after:w-0 after:bg-orange-400 after:transition-all">
-            Portfolio
-          </a>
-          <a href="#" className="relative text-lg font-medium text-gray-700 hover:after:w-6 after:absolute after:bottom-0 after:left-0 after:h-[3px] after:w-0 after:bg-orange-400 after:transition-all flex items-center gap-1">
-            Notifications
-            <i className="fas fa-bell text-2xl"></i>
-            <span className="absolute -top-1 -right-2 bg-red-500 text-white text-[10px] rounded-full px-1.5">
-            3</span>
-          </a>
-          <a href="#" className="relative text-lg font-medium text-gray-700 hover:after:w-6 after:absolute after:bottom-0 after:left-0 after:h-[3px] after:w-0 after:bg-orange-400 after:transition-all">
-            Profile
-          </a>
-        </nav>
-      </header>
-
-      {/* Dashboard */}
-      <main className="text-center">
-        <h1>
-          Welcome back, Alex!
-        </h1>
-
-        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-          
-          {/* Card 1 */}
-          <div className="bg-white p-8 rounded-xl shadow-md border border-orange-400 hover:-translate-y-1 transition">
-            <i className="fas fa-link text-3xl text-orange-400 mb-4"></i>
-            <h2 className="text-3xl font-bold text-gray-800">25</h2>
-            <p className="text-gray-500 mt-2 text-sm">Files shared via Link PDF</p>
+<>
+{/* Header */}
+        <header className="w-full bg-black rounded-2xl px-5 py-4 flex flex-wrap items-center justify-between mb-8 border border-gray-200 shadow-sm bg-white/60 backdrop-blur-md">
+          <div className="p-1">
+            <img
+              src="https://ninjatech.agency/wp-content/themes/ninja/assets/images/ninjatech-logo.svg"
+              alt="ninjatech-logo"
+              className="w-24 sm:w-28"
+            />
           </div>
+          <nav className="flex flex-wrap gap-6 sm:gap-8 items-center justify-center text-sm sm:text-base text-white">
+            {['Dashboard', 'Portfolio', 'Notifications', 'Profile'].map((item, idx) => (
+              <a
+                key={idx}
+                href="#"
+                className="relative text-white font-medium hover:text-orange-500 transition"
+              >
+                {item}
+                {item === 'Notifications' && (
+                  <>
+                    <i className="fas fa-bell text-lg ml-1"></i>
+                    <span className="absolute -top-2 -right-3 bg-red-500 text-white text-[10px] rounded-full px-1.5">3</span>
+                  </>
+                )}
+              </a>
+            ))}
+          </nav>
+        </header>
 
-          {/* Card 2 */}
-          <div className="bg-white p-8 rounded-xl shadow-md border border-orange-400 hover:-translate-y-1 transition">
-            <i className="fas fa-file-pdf text-3xl text-orange-400 mb-4"></i>
-            <h2 className="text-3xl font-bold text-gray-800">15</h2>
-            <p className="text-gray-500 mt-2 text-sm">Files shared via PDF Upload</p>
+        {/* Main Dashboard */}
+        <main className="w-full p-4 sm:p-6">
+          <h1 className="text-xl sm:text-2xl">Welcome back, Alex!</h1>
+          <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            {/* Cards */}
+            {[
+              { icon: 'link', value: 25, label: 'Files shared via Link PDF' },
+              { icon: 'file-pdf', value: 15, label: 'Files shared via PDF Upload' },
+              { icon: 'hourglass-end', value: 3, label: 'Links expiring soon' },
+            ].map((card, i) => (
+              <div
+                key={i}
+                className="rounded-xl border border-gray-200 shadow-sm p-6 hover:shadow-md transition transform hover:-translate-y-1"
+              >
+                <i className={`fas fa-${card.icon} text-xl sm:text-2xl text-orange-500 mb-3`}></i>
+                <h2 className="text-2xl font-bold text-gray-800">{card.value}</h2>
+                <p className="text-sm text-gray-600 mt-1">{card.label}</p>
+              </div>
+            ))}
           </div>
+        </main>
+   
+    </>
+  );
+};
 
-          {/* Card 3 */}
-          <div className="bg-white p-8 rounded-xl shadow-md border border-orange-400 hover:-translate-y-1 transition">
-            <i className="fas fa-hourglass-end text-3xl text-orange-400 mb-4"></i>
-            <h2 className="text-3xl font-bold text-gray-800">3</h2>
-            <p className="text-gray-500 mt-2 text-sm">Links expiring soon</p>
-          </div>
-
-        </div>
-      </main>
-
-    </div>
-  </div>
-  )
-}
-
-export default Dashboard
+export default Dashboard;

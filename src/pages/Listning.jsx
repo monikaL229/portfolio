@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 import { FaCopy, FaShare, FaCheckCircle, FaClone } from "react-icons/fa";
+import Button from '../components/Button';
 
 const projectsData = [
   {
@@ -44,9 +45,7 @@ const Listing = () => {
   };
 
   return (
-    <div className="container mx-auto p-6">
-      <h1>Portfolio Listing</h1>
-
+    <>
       {/* Filters */}
       <div className="flex flex-wrap gap-4 justify-center mb-10">
         <input
@@ -91,12 +90,12 @@ const Listing = () => {
             <option>1 week</option>
             <option>2 weeks</option>
           </select>
-          <button className="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600">
+          <Button>
             Share
-          </button>
-          <button className="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600">
+          </Button>
+           <Button> 
             Export as PDF
-          </button>
+           </Button>
         </div>
       )}
 
@@ -147,7 +146,8 @@ const Listing = () => {
           </div>
         ))}
       </div>
-    </div>
+      </>
+ 
   );
 };
 

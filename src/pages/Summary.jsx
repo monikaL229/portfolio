@@ -34,7 +34,7 @@ const Summary= () => {
   };
 
   return (
-    <div className="container max-w-xl bg-white rounded-2xl shadow-lg p-8 ">
+    <>
 
       {/* Header */}
       <h1>Confirm and Share Portfolios</h1>
@@ -79,7 +79,7 @@ const Summary= () => {
         <h3 className="text-2xl font-medium text-gray-800 mb-4">Share Link:</h3>
         <a href={shareLink} id="generatedLink" target="_blank" className="text-lg text-orange-500 hover:underline break-words">{shareLink}</a>
       </div>
-    </div>
+    </>
   );
 };
 
